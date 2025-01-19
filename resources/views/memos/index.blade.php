@@ -17,9 +17,12 @@
         @foreach ($memos as $memo)
             {{-- <li><a href=" route('memos.show')/memos/{{ $memo->id }}">{{ $memo->title }}</a></li> --}}
             <li><a href=" {{ route('memos.show', $memo) }}">{{ $memo->title }}</a></li>
- @endforeach
+        @endforeach
 
     </ul>
+
+{{--  --}}
+    <button onclick='location.href="{{ route("memos.create") }}"'>登録する</button>
 </body>
 
 </html>
